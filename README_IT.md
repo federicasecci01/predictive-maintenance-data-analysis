@@ -1,3 +1,4 @@
+
 🇬🇧 [English](README.md) | 🇮🇹 Italiano
 
 # Predictive Maintenance Data Analysis
@@ -10,7 +11,7 @@ L'obiettivo del progetto è studiare il comportamento operativo dei macchinari, 
 
 Il progetto combina **Microsoft Excel e Power Query** per la preparazione, trasformazione e analisi quantitativa dei dati con **Tableau**, che verrà utilizzato nella fase finale per la costruzione di una dashboard interattiva.
 
-La mia formazione in **Matematica** ha influenzato l'approccio utilizzato, in particolare nella costruzione di nuove variabili quantitative, nell'impiego della statistica descrittiva, nell'analisi delle correlazioni e nell'interpretazione dei risultati.
+La mia formazione in **Matematica** ha influenzato l'approccio utilizzato, in particolare nella costruzione di nuove variabili quantitative, nell'impiego della statistica descrittiva, nell'analisi delle correlazioni e nell'interpretazione strutturata dei risultati numerici.
 
 > **Stato del progetto:** in corso di sviluppo.  
 > L'analisi in Excel è stata completata. La dashboard Tableau è attualmente in fase di realizzazione e verrà aggiunta al repository al termine dello sviluppo.
@@ -134,21 +135,21 @@ Il confronto considera variabili quali:
 * Tool Wear;
 * Torque.
 
-I risultati evidenziano differenze nelle condizioni operative medie tra i due gruppi.
+Rispetto alle macchine senza guasto, le macchine che hanno registrato un Machine Failure presentano mediamente:
 
-In particolare, le macchine che hanno registrato un guasto presentano:
+* **Mechanical Power:** circa `+16,63%`
+* **Tool Wear:** circa `+34,76%`
+* **Torque:** circa `+26,59%`
+* **Rotational Speed:** circa `−2,84%`
+* **Delta Temperature:** circa `−6,16%`
 
-* **Mechanical Power:** circa `+XX%`
-* **Tool Wear:** circa `+XX%`
-* **Torque:** circa `+XX%`
-* **Rotational Speed:** circa `−XX%`
-* **Delta Temperature:** circa `−XX%`
+Le differenze più rilevanti emergono quindi per **Tool Wear, Torque e Mechanical Power**.
 
-Le differenze più rilevanti emergono in particolare per **Tool Wear, Torque e Mechanical Power**.
+In particolare, le macchine che hanno registrato un guasto mostrano mediamente un livello di usura dell'utensile sensibilmente superiore, una coppia più elevata e una maggiore potenza meccanica rispetto alle macchine senza guasto.
 
-Questa analisi permette di individuare alcune caratteristiche operative associate ai casi di guasto presenti nel dataset. I risultati hanno tuttavia natura **descrittiva** e non devono essere interpretati come prova di una relazione causale tra una singola variabile e il verificarsi del guasto.
+Al contrario, Rotational Speed e Delta Temperature risultano mediamente inferiori nel gruppo delle macchine che hanno registrato un failure.
 
-> I valori percentuali verranno aggiornati sulla base della versione definitiva della Tabella Pivot.
+Questa analisi permette di evidenziare alcune caratteristiche operative associate ai casi di guasto presenti nel dataset. I risultati hanno tuttavia natura **descrittiva** e non devono essere interpretati come prova di una relazione causale tra una singola variabile e il verificarsi del guasto.
 
 ---
 
@@ -188,7 +189,9 @@ Tra le modalità di guasto registrate, **Heat Dissipation Failure (HDF)** risult
 
 Il confronto tra macchine con e senza guasto evidenzia inoltre differenze nelle condizioni operative, in particolare per **Tool Wear, Torque e Mechanical Power**.
 
-Nel complesso, l'analisi mostra come il fenomeno del guasto non possa essere ricondotto semplicemente al comportamento di una singola variabile, ma debba essere osservato considerando simultaneamente più caratteristiche operative.
+La matrice di correlazione mostra tuttavia che le singole variabili operative presentano soltanto associazioni lineari deboli con Machine Failure.
+
+Nel complesso, l'analisi suggerisce quindi che il fenomeno del guasto non possa essere ricondotto semplicemente al comportamento di una singola variabile, ma debba essere osservato considerando simultaneamente più caratteristiche operative.
 
 ---
 
@@ -270,11 +273,20 @@ Al completamento del progetto verranno aggiunti:
 
 ## Fonte del dataset
 
-Il progetto utilizza il dataset **AI4I 2020 Predictive Maintenance**, sviluppato come dataset sintetico per rappresentare un contesto industriale di manutenzione predittiva.
+Il progetto utilizza il **AI4I 2020 Predictive Maintenance Dataset**, disponibile attraverso la **UCI Machine Learning Repository**.
 
-Il dataset è stato utilizzato a scopo formativo e di portfolio.
+Il dataset contiene **10.000 osservazioni** ed è stato sviluppato come dataset sintetico progettato per rappresentare, nel modo più realistico possibile, un contesto industriale di manutenzione predittiva.
 
-La preparazione dei dati, la costruzione delle variabili aggiuntive, le analisi statistiche, le Tabelle Pivot, l'interpretazione dei risultati e la futura dashboard Tableau sono state sviluppate nell'ambito del mio portfolio personale di Data Analytics.
+È stato utilizzato in questo progetto a scopo formativo e di portfolio.
+
+La preparazione dei dati, la costruzione delle variabili aggiuntive, le analisi statistiche, le Tabelle Pivot, l'interpretazione dei risultati e la dashboard Tableau sono state sviluppate nell'ambito del mio portfolio personale di Data Analytics.
+
+**Fonte ufficiale:**  
+[AI4I 2020 Predictive Maintenance Dataset — UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/601/ai4i+2020+predictive+maint)
+
+**DOI:** `10.24432/C5HS5C`
+
+**Licenza:** CC BY 4.0
 
 ---
 
